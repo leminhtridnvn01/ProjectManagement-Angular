@@ -1,0 +1,34 @@
+<div class="project-header-container">
+    <div class="header-section" style="padding: 0px 24px;">
+        <div class="header-section--left">
+            <div class="project-name-container">
+                <ngx-skeleton-loader *ngIf="!project" [theme]="{ width: '30px', height: '80%' }"></ngx-skeleton-loader>
+                <div class="project-icon" *ngIf="project" (click)="showInfo()" style="cursor: pointer;">
+                    <mat-icon style="color: rgb(255, 142, 124);">brightness_1</mat-icon>
+                </div>
+                <div class="project-name">
+                    <ngx-skeleton-loader *ngIf="!project"  [theme]="{ width: '60px', height: '80%' }"></ngx-skeleton-loader>
+                    {{project?.project?.name}}
+                </div>
+                
+                <div class="project-edit-icon">
+                    <i class="fa fa-pencil" aria-hidden="true" style="font-size: 15px;"></i>
+                </div>
+            </div>
+            <div class="tab-menus-container">
+                <div class="tab-menus" *ngFor="let item of items">
+                    <div class="tab-menu-item">
+                        <div class="item-icon"></div>
+                        <span>{{item.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-section--right">
+        </div>
+    </div>
+</div>
+<div class="kanban-view-container">
+    <app-view [stages]="project?.stages!"></app-view>
+    <router-outlet></router-outlet>
+</div>  

@@ -1,0 +1,50 @@
+.project-header-container{
+    margin-left: 17%;
+}
+.kanban-view-container{
+    margin-left: 17%;
+    margin-top: 2%;
+}
+.header-section {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.header-section--left{
+    padding: 12px 0px 0px;
+}
+
+.project-name-container{
+    display: flex;
+    justify-content: left; 
+    gap: 10px;
+}
+
+.project-name{
+    color: #282e3e;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-menus-container{
+    display: flex;
+    justify-content: space-around; 
+    gap: 8px;
+}
+
+.tab-menu-item{
+    padding: 7px 12px;
+    border: 1px solid #d9dee8;
+    border-width: 1px;
+    border-width: .0625rem;
+    border-radius: 30px;
+    border-radius: 1.875rem;
+    background-color: #fff;
+    white-space: nowrap;
+}

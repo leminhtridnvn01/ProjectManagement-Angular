@@ -1,0 +1,20 @@
+<div class="w3-sidebar w3-bar-block w3-black" style="width:15%">
+    <button href="#" class="w3-button w3-block w3-left-align">
+        <i class="fa fa-home"></i>
+        <span style="margin: 0 0 0 8px; color: white; font-size: larger;">Trang chủ</span>
+    </button>
+    <hr style="border: 1px solid #6c757d">
+    <button class="w3-button w3-block w3-left-align" (click)="myAccFunc()" >
+        <i class="fa fa-globe"></i>
+        <span style="margin: 0 0 0 8px;"> Công việc </span>
+        <i class="fa fa-caret-down" style="margin: 0 0 0 8px;"></i>
+    </button>
+    <div id="demoAcc" class="w3-black w3-card {{isShow}}" style="background-color: transparent;">
+        <div class="project-container" *ngFor="let project of projectsByUser">
+            <a class="w3-bar-item w3-button w3-black" (click)="onClick(project.id)">
+                <span style="margin: 0 0 0 16px;">{{project.name}}</span>
+            </a>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
