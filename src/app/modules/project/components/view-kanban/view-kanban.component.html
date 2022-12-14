@@ -34,7 +34,7 @@
                                     <ng-template #dontHasMember>
                                         <i class="fa-solid fa-user"></i>
                                         <span style="margin-left: 2px;">
-                                            Thêm người phụ trách
+                                            Thêm người phụ trách 
                                         </span>
                                     </ng-template>
                                 </div>
@@ -45,4 +45,7 @@
             </dx-sortable>
         </dx-scroll-view>
     </div>
+</div>
+<div class="task-detail" *ngIf="taskDetail">
+    <app-task-detail [taskId]="currentTaskId" (closeTaskDetail)="closeTaskDetail($event)"></app-task-detail>
 </div>

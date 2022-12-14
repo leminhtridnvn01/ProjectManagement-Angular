@@ -1,0 +1,39 @@
+::ng-deep #container {
+    padding: 10px;
+}
+
+::ng-deep #container ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+::ng-deep #container ul li {
+    display: inline-block;
+    width: 160px;
+    margin: 10px;
+}
+
+::ng-deep #container ul li img {
+    width: 100px;
+}
+
+::ng-deep .button-info {
+    margin: 10px;
+}
+
+::ng-deep .dx-popup-content p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+::ng-deep  .dx-popup-normal {  
+    position: absolute;
+    right: 0 !important;
+    height: 100% !important;
+    width: 30% !important;
+    background-color: red;
+} 
+
+::ng-deep .dx-overlay-shader {
+    pointer-events: none !important; 
+    background-color: transparent !important;
+}

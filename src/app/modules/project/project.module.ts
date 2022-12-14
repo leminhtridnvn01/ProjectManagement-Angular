@@ -14,13 +14,15 @@ import { MatDividerModule } from '@angular/material/divider';
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { DevExtremeModule, DxButtonModule, DxPopupModule, DxScrollViewModule, DxSortableModule, DxTemplateModule } from "devextreme-angular";
 import { BrowserModule } from "@angular/platform-browser";
+import { TaskDetailComponent } from './components/task-detail/task-detail.component';
 
 @NgModule({
   declarations: [
     ProjectComponent,
     ViewComponent,
     ViewKanbanComponent,
-    SidebarComponent
+    SidebarComponent,
+    TaskDetailComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,6 @@ import { BrowserModule } from "@angular/platform-browser";
         ]
       }
     ]),
-    DevExtremeModule,
     DxButtonModule,
     DxScrollViewModule,
     DxSortableModule,

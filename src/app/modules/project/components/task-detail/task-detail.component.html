@@ -1,0 +1,44 @@
+<dx-popup 
+    [showTitle]="true" 
+    title="{{doneButtonOptions.text}}" 
+    [dragEnabled]="false" 
+    [showCloseButton]="true"
+   
+    (onHiding)="close()" 
+    [(visible)]="popupVisible"
+    [hideOnOutsideClick]="true" 
+    [animation]="{ show: { type: 'slide', from: { position: { my: 'left', at: 'right'} }, duration: 700, easing: 'customEasing' } }"
+    [position]="{ my: 'right top', at: 'right top'}">
+    <div *dxTemplate="let data of 'content'">
+        <h1 (click)="close()">
+            <b>{{currentTask.name}}</b>
+        </h1>
+        
+        <!-- <div *ngIf="currentTask.members.length > 0; else noMember">
+            <i class="fa-solid fa-user" style="color: red;" ></i>
+            <span style="margin-left: 2px;">
+                {{currentTask.members[0].name}}
+            </span>
+        </div>
+        <ng-template #noMember>
+            <i class="fa-solid fa-user"></i> -->
+            <span style="margin-left: 2px;">
+                Thêm người phụ trách
+            </span>
+        <!-- </ng-template> -->
+        
+        <p>
+            Address:
+            <span>haha</span>
+        </p>
+        <p>
+            Hire Date:
+            <span>haha</span>
+        </p>
+        <p>
+            Position:
+            <span>haha</span>
+        </p>
+
+    </div>
+</dx-popup>
